@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pickhaxe>
+  <mod
+    id="funnybfdi"
+    version="1.1.0"
+    parentPackage="xyz.imcodist.funnybfdi"
+    classPath="./src/"
+    resourcePath="./resources/"
+  />
+
+  <!-- An entry point can be CLIENT, SERVER, or *, defaulting to * (both) -->
+  <mod-entry-point
+    environment="*"
+    value="FunnyBFDIMod"
+  />
+
+  <!--
+  -->
+  <mod-mixin
+    package="xyz.imcodist.funnybfdi.mixin">
+    <class environment="CLIENT" value="PlayerRendererMixin" />
+  </mod-mixin>
+
+  <mod-author 
+    name="codist"
+    homepage="https://imcodist.xyz/" />
+
+  <mod-contact
+    issues="https://github.com/ImCodist/funny-bfdi/issues"
+    sources="https://github.com/ImCodist/funny-bfdi" />
+
+  <mod-metadata 
+    name="Funny BFDI"
+    description="Adds an animated BFDI mouth on all players"
+  />
+
+  <mod-license value="MIT License" />
+
+  <mod-dependency
+    type="suggests"
+    id="voicechat"
+    version=">=1.20.2-2.4.28">
+    <loader value="fabric" />
+    <minecraft op="gteq" value="1.20" />
+    <minecraft op="lteq" value="1.20.2" />
+  </mod-dependency>
+
+  <mod-build-dependency
+    type="modImplementation"
+    group="maven.modrinth"
+    name="midnightlib"
+    include="true"
+    version="1.5.0-fabric"
+    url="https://maven.maxhenkel.de/repository/public">
+    <loader value="fabric" />
+    <minecraft op="gteq" value="1.20.2" />
+  </mod-build-dependency>
+
+  <mod-build-dependency
+    type="implementation"
+    group="de.maxhenkel.voicechat"
+    name="voicechat-api"
+    version="2.4.11"
+    url="https://api.modrinth.com/maven">
+    <loader value="fabric" />
+    <minecraft op="gteq" value="1.20.2" />
+  </mod-build-dependency>
+</pickhaxe>

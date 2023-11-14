@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "funnybfdi",
+	"version": "${version}",
+	"name": "Funny BFDI",
+	"description": "adds a bfdi mouth all players and that is what it does\nsupports simple voice chat because of course it does",
+	"authors": [
+		"codist"
+	],
+	"contact": {
+		"issues": "https://github.com/ImCodist/funny-bfdi/issues",
+		"sources": "https://github.com/ImCodist/funny-bfdi"
+	},
+	"license": "MIT License",
+	"icon": "assets/funnybfdi/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"xyz.imcodist.funnybfdi.FunnyBFDI"
+		],
+		"client": [
+			"xyz.imcodist.funnybfdi.client.FunnyBFDIClient"
+		],
+		"voicechat": [
+			"xyz.imcodist.funnybfdi.voice.FunnyBFDIVoice"
+		]
+	},
+	"mixins": [
+		"funnybfdi.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.23",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"voicechat": ">=1.20.2-2.4.11"
+	}
+}
